@@ -14,7 +14,7 @@ class Solution
 {
     public:
     
-    // Function to return a set of empty places
+    // Function to return the first empty place in form of a vector
     vector<int> empty_places(int grid[N][N]) {
         vector<int> res;
         for (int i = 0; i < N; i++) {
