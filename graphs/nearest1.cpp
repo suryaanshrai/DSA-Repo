@@ -1,3 +1,13 @@
+/*
+https://practice.geeksforgeeks.org/problems/distance-of-nearest-cell-having-1-1587115620/1
+
+Given a binary grid of n*m. Find the distance of the nearest 1 in the grid for each cell.
+The distance is calculated as |i1  - i2| + |j1 - j2|, where i1, j1 are the row number and column
+number of the current cell, and i2, j2 are the row number and column number of the nearest cell having value 1. 
+
+There should be atleast one 1 in the grid.
+ 
+*/
 //{ Driver Code Starts
 #include<bits/stdc++.h>
 using namespace std;
