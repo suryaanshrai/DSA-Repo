@@ -1,0 +1,1 @@
+{"name":"Local: aliendict","url":"c:\\CP\\DSA-Repo\\graphs\\traversal\\aliendict.cpp","tests":[{"id":1688408200929,"input":"1\n5 4\nbaa abcd abca cab cada","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\CP\\DSA-Repo\\graphs\\traversal\\aliendict.cpp","group":"local","local":true}
