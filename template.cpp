@@ -6,7 +6,7 @@
 #define loop(n) for (int i = 0; i < n; i++)
 #define mod 1000000007
 #define inf (1ll<<60)
-#define all(x) (x).begin, (x).end()
+#define all(x) (x).begin(), (x).end()
 
 using namespace std;
 
