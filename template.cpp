@@ -2,7 +2,7 @@
 #define ll long long
 #define pb push_back
 #define fast_io ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
-#define fr(i,a,b) for (int i = a, a < b; i++)
+#define fr(i,a,b) for (int i = a; i < b; i++)
 #define loop(n) for (int i = 0; i < n; i++)
 #define mod 1000000007
 #define inf (1ll<<60)
