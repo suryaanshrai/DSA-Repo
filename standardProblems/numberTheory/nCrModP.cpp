@@ -11,12 +11,7 @@ unsigned long long power(int a, int b, int p) {
     }
     return res;
 }
-unsigned long long fact(long n, int p) {
-    if (n == 1) {
-        return 1;
-    }
-    return ((n%p) * (fact(n-1, p)%p))%p;
-}
+
 unsigned long long  fermatLittle(int n, int r, int p)
 {
     // Write your code here.
