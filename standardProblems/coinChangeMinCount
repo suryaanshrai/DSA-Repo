@@ -1,0 +1,25 @@
+int coinChange(vector<int>& coins, int amount) {
+        // if (amount == 0) {
+        //     return 0;
+        // }
+        // int ans = INT_MAX;
+        // for (int i:coins) {
+        //     if (i <= amount) {
+        //         int x = 1+coinChange(coins, amount-i);
+        //         if (x != 0) ans = min(ans, x);
+        //     }
+        // }
+        // if (ans == INT_MAX) return -1;
+        // return ans;
+        vector<int> dp(amount+1, amount+1);
+        dp[0] = 0;
+        for (int i = 1; i <= amount; i++) {
+            for (int j:coins) { 
+                if (i-j >= 0) {
+                    dp[i] = min(dp[i], 1+dp[i-j]);
+                }
+            }
+        }
+        if (dp[amount] == amount+1) return -1;
+        return dp[amount];
+    }
