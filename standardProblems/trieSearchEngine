@@ -1,0 +1,49 @@
+typedef struct Node {
+	Node *next[26];
+	int maxSubtree;
+
+	Node() {
+		maxSubtree = 0;
+		for(int i=0; i<26; i++) next[i] = NULL;
+	}
+}Node;
+
+
+void insert(Node *curr, pair<string, int> &databaseEntry, int index) {
+	if(index == databaseEntry.first.length()) {
+		curr->maxSubtree = databaseEntry.second;
+		return;
+	}
+
+	curr->maxSubtree = max(curr->maxSubtree, databaseEntry.second);
+	int nextIndex = (int)(databaseEntry.first[index] - 'a');
+	if(curr->next[nextIndex] == NULL) {
+		curr->next[nextIndex] = new Node();
+	}
+
+	insert(curr->next[nextIndex], databaseEntry, index+1);
+}
+
+int query(Node *curr, string &txt, int index) {
+	if(curr == NULL) return -1;
+	if(index == txt.length()) {
+		return curr->maxSubtree;
+	}
+
+	int nextIndex = (int)(txt[index] - 'a');
+	return query(curr->next[nextIndex], txt, index+1);
+}
+
+vector<int> searchEngine(vector<pair<string, int> > database, vector<string> text)
+{
+    // Write your code here
+    Node *root = new Node();
+    for(int i=0; i<database.size(); i++){
+		insert(root, database[i], 0);
+	}
+    vector<int> ans;
+    for (string s:text) {
+        ans.push_back(query(root, s, 0));
+    }
+    return ans;
+}
