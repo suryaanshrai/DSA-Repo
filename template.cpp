@@ -7,6 +7,10 @@
 #define mod 1000000007
 #define inf (1ll<<60)
 #define all(x) (x).begin(), (x).end()
+#define print(x) for (auto it:(x)) cout << it << " "; cout << endl;
+#define print_map(x) for (auto it:(x)) cout << it.first << " " << it.second << endl;
+#define arr_in(arr, n) loop(n) cin >> (arr)[i];
+
 
 using namespace std;
 
