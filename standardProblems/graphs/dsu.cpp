@@ -29,28 +29,4 @@ class DSU {
             rank[py]++;
         }
     }
-    // This function works for zero-based indices
-    int components() {
-        map<int,int> m;
-        int count = 0;
-        for (int i = 0; i < parent.size()-1; i++) {
-            int p = find(i);
-            if (m.find(p) == m.end()) {
-                m[p]++;
-            }
-        }
-        return m.size();
-    }
-    // this works for 1 based-indices
-    int components_1() {
-        map<int,int> m;
-        int count = 0;
-        for (int i = 1; i < parent.size(); i++) {
-            int p = find(i);
-            if (m.find(p) == m.end()) {
-                m[p]++;
-            }
-        }
-        return m.size();
-    }
 };
